@@ -1,7 +1,7 @@
 name: data
 on:
   schedule:
-    - cron: 0 6 1 * *
+    - cron: 0 6 * * *
   workflow_dispatch: {}
   push:
     paths:
@@ -20,6 +20,6 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
-          http_url: https://gsx2json.com/api?id=1JPcqaDEBkIIKUgJXG8GOpszjK9fl7JFbegVfYYggtPI&sheet=dapps
+          http_url: https://gsx2json.com/api?id=1P5dsf1ZhB4VrUV7DwAOTTViDog8fa7m-OnmIWIAIwcE&sheet=dapps
           downloaded_filename: data.json
           postprocess: ./postprocess.ts
